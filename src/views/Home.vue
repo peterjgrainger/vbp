@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    
+    <LandingPage/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import LandingPage from '@/components/LandingPage.vue';
 
 @Component({
   components: {
-    HelloWorld,
+    LandingPage,
   },
 })
 export default class Home extends Vue {}
 </script>
+
+<style scoped lang="scss">
+.pic {
+  padding: 10%
+}
+</style>
