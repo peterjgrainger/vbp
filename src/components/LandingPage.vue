@@ -1,12 +1,14 @@
 <template>
-
+    
   <div class="hello">
-    <div class="ui stackable three column centered grid">
-        <div class="column">
-          <ImFeelingConfident class="image"/><br>
-          <button><h2>create your plan</h2></button>
+        <div id="nav">
+          <router-link to="/">Home</router-link> |
+          <router-link to="/about">About</router-link>
         </div>
-    </div>
+        <ImFeelingConfident class="image"/><br>
+        <router-link to="question/feelings">
+          <button><h2>create your plan</h2></button>
+        </router-link>
   </div>
 </template>
 
@@ -34,33 +36,6 @@ h3 {
   max-width: 400px
 }
 
-@keyframes waggle {
-  0% {
-    transform: none;
-  }
-  50% {
-    transform: rotateZ(-20deg) scale(1.2);
-  }
-  60% {
-    transform: rotateZ(25deg) scale(1.2);
-  }
-  67.5% {
-    transform: rotateZ(-15deg) scale(1.2);
-  }
-  75% {
-    transform: rotateZ(15deg) scale(1.2);
-  }
-  82.5% {
-    transform: rotateZ(-12deg) scale(1.2);
-  }
-  85% {
-    transform: rotateZ(0) scale(1.2);
-  }
-  100% {
-    transform: rotateZ(0) scale(1);
-  }
-}
-
 button {
   background: #42b983;
   border: 6px solid #eee;
@@ -70,7 +45,6 @@ button {
   padding: 0.5em 1em;
   margin: 0.25em 0;
   min-width: 7em;
-  animation: waggle 2s 1s forwards ease-out 1;
   font-size: 1.1rem
 }
 
